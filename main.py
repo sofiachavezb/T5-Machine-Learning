@@ -28,8 +28,8 @@ plt.legend()
 plt.show()
 
 # Plot the confusion matrix
-print("Precision with custom SGD: " + str(accuracy(SGD_preds, SGD_labels)))
-print("Precision with Adam: " + str(accuracy(Adam_preds, Adam_labels)))
+print(f"Accuracy with custom SGD: {accuracy(SGD_preds, SGD_labels)}")
+print(f"Accuracy with Adam: {accuracy(Adam_preds, Adam_labels)}")
 SGD_conf_matrix = confusion_matrix(SGD_preds, SGD_labels)
 Adam_conf_matrix = confusion_matrix(Adam_preds, Adam_labels)
 plt.imshow(SGD_conf_matrix, cmap="hot", interpolation="nearest")
